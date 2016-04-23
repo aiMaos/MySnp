@@ -1,0 +1,26 @@
+----------------------------------------------------------------
+Sat Apr 23 12:51:05 CST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0154-4174-f9a4-000000bee8c8 
+on database directory D:\SnpDbTest with class loader sun.misc.Launcher$AppClassLoader@1d16e93 
+Loaded from file:/E:/vdisk/myzone/%e5%81%a5%e5%ba%b7/%e5%9f%ba%e5%9b%a0/MySnp/lib/db-derby-10.12.1.1-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_91-b14
+user.dir=E:\vdisk\myzone\健康\基因\MySnp
+os.name=Windows 7
+os.arch=x86
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sat Apr 23 12:51:06 CST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance 08264012-0154-4174-f9a4-000000bee8c8 
+on database directory D:\SnpDb with class loader sun.misc.Launcher$AppClassLoader@1d16e93 
+Loaded from file:/E:/vdisk/myzone/%e5%81%a5%e5%ba%b7/%e5%9f%ba%e5%9b%a0/MySnp/lib/db-derby-10.12.1.1-lib/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_91-b14
+user.dir=E:\vdisk\myzone\健康\基因\MySnp
+os.name=Windows 7
+os.arch=x86
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
