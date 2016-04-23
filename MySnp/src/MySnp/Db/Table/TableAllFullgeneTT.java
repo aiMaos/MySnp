@@ -79,6 +79,22 @@ public class TableAllFullgeneTT {
 		return snp;
 	}
 	
+	public static long getRecordCount() {
+		long count = 0;
+		
+		String sql = "select count(*) CNT from "+ TABLE_ALL_FULLGENE_TT;
+		ResultSet rs = getDbInstance().executeQuery(sql);
+        try {
+			if (rs.next()) {
+				count = rs.getLong("CNT");
+			} 
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+        return count;
+	}
+
 	public static SnpDatabase getDbInstance() {
 		return SnpDbMySql.getInstance();
 	}	

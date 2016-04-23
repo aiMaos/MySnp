@@ -47,13 +47,15 @@ public class FuncConvert {
 			long pos = 0;
 			long filesize = new File(sVcfPath).length();
 			String filename = new File(sVcfPath).getName();
+			long currentTableCount = TableAllFullgeneTT.getRecordCount();
+			System.out.println("Current TableAllAltDbsnp record count="+currentTableCount);
 					
 			BufferedReader vcf = new BufferedReader(
 					new FileReader(sVcfPath));
-
+			TableAllFullgeneTT.getDbInstance().setAutoCommit(false);
+			
 			int counter =0;
 			long timer_startpoint = System.currentTimeMillis();
-			
 			
 			// read VCF
 			do {
@@ -65,13 +67,15 @@ public class FuncConvert {
 				}
 				pos += sLine.length();
 				counter ++;
-				if (counter > 0) {
+
+				if (counter > currentTableCount) {
 					// 1	900340	rs749745144	C	G	.	.	RS=749745144;RSPOS=900340;dbSNPBuildID=144;SSR=0;SAO=0;VP=0x0500000a0005000002000100;WGT=1;VC=SNV;INT;R5;ASP
 					SnpObject snp = new VcfRecord(sLine).getSnpObject();
 					TableAllFullgeneTT.insertRecord(snp);										
 				}
 				
-				if (counter%1000000 == 0) {
+				if (counter%100000 == 0) {
+					TableAllFullgeneTT.getDbInstance().commit();
 					System.out.println(filename+",line:"+counter+",time:"+(System.currentTimeMillis()-timer_startpoint)/1000+",progress:"+pos*100/filesize+"%");
 				}
 
