@@ -19,8 +19,14 @@ public class TableAllFullgeneTT {
 	public static String COLUMN_GENOTYPE = "GENOTYPE";
 	public static String COLUMN_COMMENT = "COMMENT";
 			
-	public static void insertRecord(SnpObject snp) {
-
+	public static void insertRecord(SnpObject snpSrc) {
+		SnpObject snp = new SnpObject(snpSrc);
+		if ((snp.ref != null) && (snp.ref.length()>300)) {
+			snp.ref = ".";
+		}
+		if ((snp.alt != null) && (snp.alt.length()>300)) {
+			snp.alt = ".";
+		}
 		String sql = "insert into "+TABLE_ALL_FULLGENE_TT
 				+"("
 				+COLUMN_CHR+","
