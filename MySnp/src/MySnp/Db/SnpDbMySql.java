@@ -9,7 +9,7 @@ import MySnp.Db.Comm.SnpDatabase;
 
 public class SnpDbMySql extends SnpDatabase {
 	private static SnpDbMySql instance = null;
-    public static final String url = "jdbc:mysql://192.168.16.3:3306/snpdb";  
+    public static final String url = "jdbc:mysql://localhost:3306/snpdb";  
     public static final String driver = "com.mysql.jdbc.Driver";  
     public static final String user = "admin";  
     public static final String password = "admin"; 
